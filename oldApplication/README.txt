@@ -1,0 +1,1 @@
+This folder contains the Java program, MySql driver, and the batch file for the original application.
