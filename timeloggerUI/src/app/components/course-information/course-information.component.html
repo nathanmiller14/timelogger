@@ -1,0 +1,16 @@
+<div>
+    <p>course-information works!</p>
+    <table>
+        <thead>
+        <th>ID</th>
+        <th>Class Name</th>
+        <th></th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let course of courses"> 
+            <td>{{ course.id }}</td>
+            <td>{{ course.className }}</td> 
+        </tr>
+        </tbody>
+    </table>
+</div>
