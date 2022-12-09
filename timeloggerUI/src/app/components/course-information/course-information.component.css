@@ -1,0 +1,47 @@
+.addingCourseForm
+{
+    padding-top: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #ee9b00;
+    background: linear-gradient(to right, #ce7106, #bb6605);
+}
+
+.removingCourseForm
+{
+    padding-top: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #ee9b00;
+    background: linear-gradient(to right, #ce7106, #bb6605);
+}
+
+.courseTable
+{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+table, th, td, button
+{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table tr:nth-child(odd), button:nth-child(odd)
+{
+    background-color: #f1f1f1;
+}
+
+table tr:nth-child(even), button:nth-child(even)
+{
+    background-color: #ffffff;
+}
+
+th
+{
+    background-color: #ffffff;
+}

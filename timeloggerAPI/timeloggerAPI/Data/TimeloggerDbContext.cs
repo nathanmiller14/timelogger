@@ -5,8 +5,7 @@ namespace timeloggerAPI.Data
 {
     public class TimeloggerDbContext : DbContext
     {
-        public TimeloggerDbContext(DbContextOptions<TimeloggerDbContext> options) :
-            base(options)
+        public TimeloggerDbContext(DbContextOptions<TimeloggerDbContext> options) : base(options)
         {
 
         }

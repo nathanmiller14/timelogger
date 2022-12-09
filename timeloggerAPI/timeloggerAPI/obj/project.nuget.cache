@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rNrDja/xAznbkvwgA+9V/bZNutCL3wEtAyad5UJL8hsF3lkiGzhUHWlhZuawURUK7RlGDBTAeJkTM1XxpzrpLQ==",
+  "dgSpecHash": "7w3Ge/jRSFFOJmKfaUYsyRFsmm7dWjT3kPpKbi5V4XxE7g5N2FZgu7xsOYcnEblQPRmAQTZP0540FCbFtS0L0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Natha\\Desktop\\Projects\\timelogger\\timeloggerAPI\\timeloggerAPI\\timeloggerAPI.csproj",
+  "projectFilePath": "C:\\Users\\Natha\\Desktop\\Projects\\time-logger\\timelogger\\timeloggerAPI\\timeloggerAPI\\timeloggerAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Natha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Natha\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",

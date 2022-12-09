@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CourseInformationComponent } from './components/course-information/course-information.component';
 import { TimeloggerComponent } from './components/timelogger/timelogger.component';
 import { LoginComponent } from './components/login/login.component';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,11 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [ MatTableModule, MatTable ]
 })
 export class AppModule { }
