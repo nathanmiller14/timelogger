@@ -6,17 +6,17 @@
     <div class="loginForm" *ngIf="showLoginForm == true">
         <p>Enter your password</p>
         <input type="password" placeholder="Enter password here">
-        <button class="btn">Login!</button>
+        <button class="btn" [routerLink]="'courses'">Login!</button>
     </div>
     <div class="signUpForm" *ngIf="showSignUpForm == true">
-        <p>Enter your first name</p>
-        <input type="input" placeholder="Enter first name here">
-        <p>Enter your last name</p>
-        <input type="input" placeholder="Enter last name here">
-        <p>Enter your desired password</p>
-        <input type="password" placeholder="Enter desired password">
-        <p>Confirm password</p>
-        <input type="password" placeholder="Confirm password">
-        <button class="btn">Create Account!</button>
+            <p>Enter your first name</p>
+            <input type="input" placeholder="Enter first name here">
+            <p>Enter your last name</p>
+            <input type="input" placeholder="Enter last name here">
+            <p>Enter your desired password</p>
+            <input type="password" placeholder="Enter desired password">
+            <p>Confirm password</p>
+            <input type="password" placeholder="Confirm password">
+            <button class="btn" [routerLink]="'courses'">Create Account!</button>
     </div>
 </div>

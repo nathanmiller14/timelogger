@@ -1,1 +1,23 @@
 <p>timelogger works!</p>
+<div class="courseTable">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Class Name</th>
+            <th>Week</th>
+            <th>Time(minutes)</th>
+            <th>Task</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let log of logs"> 
+                <td>{{ log.id }}</td>
+                <td>{{ log.course }}</td> 
+                <td>{{ log.week }}</td>
+                <td>{{ log.minutes }}</td> 
+                <td>{{ log.task }}</td>
+                <td>{{ log.description }}</td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
