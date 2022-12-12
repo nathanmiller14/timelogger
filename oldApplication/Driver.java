@@ -419,32 +419,6 @@ public class Driver
 		}
    }
    
-   public static int getIDTasks()
-   {
-	   try
-	   {
-	     String strSelectID = "SELECT ID FROM Tasks";
-            
-            
-         ResultSet rset = stmt.executeQuery(strSelectID);
-         rset.next();
-            
-            
-         int id = 1;
-            
-         while(rset.next())
-         {
-            id++;
-         }
-		 return id;
-	   }
-	   catch(SQLException ex)
-       {
-         ex.printStackTrace();
-       }
-	   return 0;
-   }
-   
    public static void addTask()
    {
 	   System.out.println("\nWhich class is this for?");
@@ -453,8 +427,7 @@ public class Driver
 	   System.out.println("\nWhat is the task name?");
 	   CONSOLE.nextLine();
 	   String newTask = CONSOLE.nextLine();
-	   int newTaskID = getIDTasks();
-	   String insertTask = "INSERT INTO Tasks VALUES (" + newTaskID + ", '" + course + "', '" + newTask + "', 0);";
+	   String insertTask = "INSERT INTO Tasks(Course, Task, Completed) VALUES ('" + course + "', '" + newTask + "', 0);";
 	   try
 	   {
 		   int taskCreated = stmt.executeUpdate(insertTask);

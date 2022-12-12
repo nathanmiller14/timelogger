@@ -1,8 +1,30 @@
 .header
 {
     text-align: center;
+    background-color: white;
 }
 .center
 {
+    text-align: center;
+}
+
+.buttons
+{
+    align-items: right;
+}
+
+.buttons{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.card
+{
+    background-color: white;
+    max-width: 500px; 
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px #d3d3d3;
+    background: #d3d3d3;
     text-align: center;
 }

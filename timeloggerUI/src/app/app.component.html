@@ -1,6 +1,44 @@
 <div class="header">
     <h1>{{ title }}</h1>
+    <div class="buttons" *ngIf="loggedIn">
+        <button class="btn" [routerLink]="'timelogger'" (click)="showNavigationBar()">
+            <h3>Logs</h3>
+        </button>
+        <button class="btn" [routerLink]="'tasks'" (click)="showNavigationBar()">
+            <h3>Tasks</h3>
+        </button>
+        <button class="btn" [routerLink]="'courses'" (click)="showNavigationBar()">
+            <h3>Courses</h3>
+        </button>
+        <button class="btn" [routerLink]="''" (click)="hideNavBar()" (click)="logOut()">
+            <h3>Sign Out</h3>
+        </button>
+    </div>
 </div>
 <div class="center">
     <router-outlet></router-outlet>
+</div>
+<div class="card" *ngIf="!loggedIn">
+    <div class="cardContent">
+        <h1>Login or Sign Up</h1>
+        <p>Enter your email</p>
+        <input #emailBox type="email" placeholder="Enter email here">
+        <button class="enterBtn" (click)="onSubmit(emailBox.value)">Enter!</button>
+        <div class="loginForm" *ngIf="showLoginForm == true">
+            <p>Enter your password</p>
+            <input type="password" placeholder="Enter password here">
+            <button class="btn" [routerLink]="'timelogger'" (click)="logIn()">Login!</button>
+        </div>
+        <div class="signUpForm" *ngIf="showSignUpForm == true">
+                <p>Enter your first name</p>
+                <input type="input" placeholder="Enter first name here">
+                <p>Enter your last name</p>
+                <input type="input" placeholder="Enter last name here">
+                <p>Enter your desired password</p>
+                <input type="password" placeholder="Enter desired password">
+                <p>Confirm password</p>
+                <input type="password" placeholder="Confirm password">
+                <button class="btn" [routerLink]="'timelogger'" (click)="logIn()">Create Account!</button>
+        </div>
+    </div>
 </div>
