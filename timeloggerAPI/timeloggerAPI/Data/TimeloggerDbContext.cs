@@ -12,11 +12,13 @@ namespace timeloggerAPI.Data
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Log> Logs { get; set; }
+        public DbSet<Models.Task> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Course>().ToTable("Courses");
             modelBuilder.Entity<Log>().ToTable("Times");
+            modelBuilder.Entity<Models.Task>().ToTable("Tasks");
         }
     }
 }

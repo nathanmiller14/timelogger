@@ -21,10 +21,10 @@ const routes: Routes = [
     path: 'tasks', component: TasksComponent
   },
   {
-    path: 'editlog', component: EditLogComponent
+    path: 'timelogger/editlog/:id', component: EditLogComponent
   },
   {
-    path: 'createlog', component: CreateLogComponent
+    path: 'timelogger/createlog', component: CreateLogComponent
   }
 ];
 

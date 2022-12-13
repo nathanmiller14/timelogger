@@ -27,16 +27,22 @@ export class CourseInformationComponent implements OnInit {
   getData()
   {
     this.courseService.getCourses().subscribe((result: Course[]) => (this.courses = result));
+    console.log(this.courses);
   }
 
   removeCourse(idToDelete: any)
   {
-    console.log(idToDelete);
     this.courseService.deleteCourse(idToDelete);
   }
 
   insertCourse(courseName: string)
   {
     this.courseService.insertCourse(courseName);
+    this.addingCourse = false;
+  }
+
+  cancel()
+  {
+    this.addingCourse = false;
   }
 }

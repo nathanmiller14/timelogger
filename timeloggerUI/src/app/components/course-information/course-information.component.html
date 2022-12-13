@@ -1,31 +1,31 @@
 <div>
-    <p>course-information works!</p>
-    <div class="courseTable">
-        <table>
-            <thead>
-                <th>ID</th>
-                <th>Class Name</th>
-                <th class="deletionRow"></th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let course of courses"> 
-                    <td>{{ course.id }}</td>
-                    <td>{{ course.className }}</td> 
-                    <button class="btn" (click)="removeCourse(course.id)">
-                        <td>X</td>
-                    </button>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <button mat-raised-button (click)="addCourse()">Add a course</button>
-    <div class="addingCourseForm" *ngIf="addingCourse">
-        <h3>Enter a course(Ex. CS-475)</h3>
-        <input #courseInput type="text">
-        <div class="buttons">
-            <button mat-raised-button class="btn" (click)="insertCourse(courseInput.value)">Save</button>
-            <button mat-raised-button class="btn">Cancel</button>
-        </div>
+    <h1>Courses</h1>
+    <button mat-raised-button (click)="addCourse()" class="addButton">Add a course</button>
+</div>
+<div class="courseTable">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Class Name</th>
+            <th class="deletionRow"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses"> 
+                <td>{{ course.id }}</td>
+                <td>{{ course.className }}</td> 
+                <button class="btn" (click)="removeCourse(course.id)">
+                    <td class="xButton">X</td>
+                </button>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="addingCourseForm" *ngIf="addingCourse">
+    <h3>Enter a course(Ex. CS-475)</h3>
+    <input #courseInput type="text">
+    <div class="buttons">
+        <button mat-raised-button class="btn" (click)="insertCourse(courseInput.value)">Save</button>
+        <button mat-raised-button class="btn" (click)="cancel() "#saveBtn>Cancel</button>
     </div>
 </div>
 

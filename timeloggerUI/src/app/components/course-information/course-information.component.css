@@ -1,11 +1,13 @@
 .addingCourseForm
 {
-    padding-top: 10px;
-    max-width: 500px;
+    background-color: white;
+    max-width: 500px; 
     margin: 0 auto;
     border-radius: 5px;
-    box-shadow: 0px 0px 30px #ee9b00;
-    background: linear-gradient(to right, #ce7106, #bb6605);
+    box-shadow: 0px 0px 30px #d3d3d3;
+    background: #d3d3d3;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .removingCourseForm
@@ -21,7 +23,10 @@
 .courseTable
 {
     max-width: 500px;
+    min-width: 500px;
     margin: 0 auto;
+    margin-left: 875px;
+    padding-bottom: 10px;
 }
 
 table, th, td, button
@@ -31,17 +36,53 @@ table, th, td, button
     padding: 5px;
 }
 
-table tr:nth-child(odd), button:nth-child(odd)
+table tr:nth-child(odd)
 {
     background-color: #f1f1f1;
 }
 
-table tr:nth-child(even), button:nth-child(even)
+table tr:nth-child(even)
 {
     background-color: #ffffff;
+}
+
+button:nth-child(even)
+{
+    background-color: #ffffff;
+}
+
+button:nth-child(odd)
+{
+    background-color: #f1f1f1;
 }
 
 th
 {
     background-color: #ffffff;
+}
+
+h1
+{
+    margin-top: 100px;
+    -webkit-text-fill-color: black;
+} 
+
+button:hover
+{
+    background-color: #d3d3d3;
+}
+
+.xButton
+{
+    border-color: transparent;
+}
+
+.addButton
+{
+    margin-bottom: 10px;
+}
+
+.buttons
+{
+    margin-top: 10px 5px 0px 5px;
 }

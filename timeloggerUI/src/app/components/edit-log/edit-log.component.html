@@ -1,1 +1,60 @@
-<p>edit-log works!</p>
+<div class="card">
+    <div *ngFor="let log of logs" class="tableContainer">
+        <h1>Edit log #{{ log.id }}</h1>
+        <table>
+            <tr>
+                <td>ID: {{ log.id }}</td>
+                <td>ID: {{ log.id}}</td>
+            </tr>
+            <tr>
+                <td>Course: {{ log.course }}</td>
+                <td>
+                    <select>
+                        <option *ngFor="let course of courses">{{ course.className }}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Week: {{ log.week }}</td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Week</mat-label>
+                        <input matInput #week placeholder="Enter new week(Ex. 10)">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>Time: {{ log.minutes }}</td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Time</mat-label>
+                        <input matInput #time placeholder="Enter new time(minutes)">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>Task: {{ log.task }}</td>
+                <td>
+                    <select>
+                        <option *ngFor="let task of tasksList">{{ task }}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Description: {{ log.description }}</td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Description</mat-label>
+                        <input matInput #description placeholder="Enter new description">
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <div class="buttonDiv">
+            <td>
+                <button mat-raised-button class="btn" (click)="updateLog()" [routerLink]="'/timelogger'">Save</button>
+                <button mat-raised-button class="btn" style="margin-left: 10px;" [routerLink]="'/timelogger'">Cancel</button>
+            </td>
+        </div>
+    </div>         
+</div>

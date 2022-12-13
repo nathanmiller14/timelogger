@@ -1,5 +1,8 @@
-﻿namespace timeloggerAPI.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace timeloggerAPI.Models
 {
+    [NotMapped]
     public class Log
     {
         public int Id { get; set; }

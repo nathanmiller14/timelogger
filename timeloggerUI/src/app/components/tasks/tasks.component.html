@@ -1,1 +1,26 @@
-<p>tasks works!</p>
+<div class="container">
+    <h1>Tasks</h1>
+    <button mat-raised-button class="addButton" (click)="userAddingTask()" *ngIf="!showTextBox">Add a task</button>
+    <input type="text" *ngIf="showTextBox">
+    <button mat-raised-button class="confirmButton" (click)="userAddedTask()" *ngIf="showTextBox">Confirm</button>
+</div>
+
+
+<section class="matTable">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Course</th>
+            <th>Task</th>
+            <th>Completed</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entry of tasksList">
+                <td>{{ entry }}</td>
+                <td>{{ entry }}</td> 
+                <td>{{ entry }}</td>
+                <td>{{ entry }}</td> 
+            </tr>
+        </tbody>
+    </table>
+</section>

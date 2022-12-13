@@ -1,1 +1,21 @@
-<p>create-log works!</p>
+<h1>Creating a log</h1>
+<div class="addingLogForm">
+    <h3>What course is this for?</h3>
+    <select>
+        <option *ngFor="let course of courses">{{ course.className }}</option>
+    </select>
+    <h3>What week is it?</h3>
+    <input #week type="text" placeholder="Ex. 10">
+    <h3>How much time(minutes) did you spend?</h3>
+    <input #time type="text" placeholder="Ex. 60">
+    <h3>What task is this for?</h3>
+    <select>
+        <option *ngFor="let task of tasksList">{{ task }}</option>
+    </select>
+    <h3>Give a description of what you did</h3>
+    <input #description type="text" placeholder="Enter a description">
+    <div class="buttons">
+        <button mat-raised-button class="btn" (click)="insertLog('CS-475')" [routerLink]="'..'">Save</button>
+        <button mat-raised-button class="btn" style="margin-left: 10px;" [routerLink]="'..'">Cancel</button>
+    </div>
+</div>

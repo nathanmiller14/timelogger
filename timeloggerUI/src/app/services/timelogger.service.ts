@@ -17,4 +17,14 @@ export class TimeloggerService {
   {
     return this.http.get<Log[]>(`${environment.apiUrl}/${this.url}/GetLogs`);
   }
+
+  public deleteLog(id: number)
+  {
+    return this.http.get(`${environment.apiUrl}/${this.url}/DeleteLog/${id}`);
+  }
+
+  public getLogByID(id: number)
+  {
+    return this.http.get<Log[]>(`${environment.apiUrl}/${this.url}/GetLogByID/${id}`);
+  }
 }

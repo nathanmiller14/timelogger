@@ -1,26 +1,30 @@
 <div class="header">
-    <h1>{{ title }}</h1>
-    <div class="buttons" *ngIf="loggedIn">
-        <button class="btn" [routerLink]="'timelogger'" (click)="showNavigationBar()">
-            <h3>Logs</h3>
+    <mat-toolbar>
+        <button [routerLink]="'timelogger'" class="homeBtn">
+            <h1>{{ title }}</h1>
         </button>
-        <button class="btn" [routerLink]="'tasks'" (click)="showNavigationBar()">
-            <h3>Tasks</h3>
-        </button>
-        <button class="btn" [routerLink]="'courses'" (click)="showNavigationBar()">
-            <h3>Courses</h3>
-        </button>
-        <button class="btn" [routerLink]="''" (click)="hideNavBar()" (click)="logOut()">
-            <h3>Sign Out</h3>
-        </button>
-    </div>
+        <div class="buttons" *ngIf="loggedIn">
+            <button class="btn" [routerLink]="'timelogger'" (click)="showNavigationBar()">
+                <h3>Logs</h3>
+            </button>
+            <button class="btn" [routerLink]="'tasks'" (click)="showNavigationBar()">
+                <h3>Tasks</h3>
+            </button>
+            <button class="btn" [routerLink]="'courses'" (click)="showNavigationBar()">
+                <h3>Courses</h3>
+            </button>
+            <button class="btn" [routerLink]="''" (click)="hideNavBar()" (click)="logOut()">
+                <h3>Sign Out</h3>
+            </button>
+        </div>
+    </mat-toolbar>
 </div>
 <div class="center">
     <router-outlet></router-outlet>
 </div>
 <div class="card" *ngIf="!loggedIn">
     <div class="cardContent">
-        <h1>Login or Sign Up</h1>
+        <h2>Login or Sign Up</h2>
         <p>Enter your email</p>
         <input #emailBox type="email" placeholder="Enter email here">
         <button class="enterBtn" (click)="onSubmit(emailBox.value)">Enter!</button>

@@ -1,23 +1,32 @@
-<p>timelogger works!</p>
-<div class="courseTable">
-    <table>
-        <thead>
-            <th>ID</th>
-            <th>Class Name</th>
-            <th>Week</th>
-            <th>Time(minutes)</th>
-            <th>Task</th>
-            <th>Description</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let log of logs"> 
-                <td>{{ log.id }}</td>
-                <td>{{ log.course }}</td> 
-                <td>{{ log.week }}</td>
-                <td>{{ log.minutes }}</td> 
-                <td>{{ log.task }}</td>
-                <td>{{ log.description }}</td> 
-            </tr>
-        </tbody>
-    </table>
+<div>
+    <h1>Logs</h1>
+    <button mat-raised-button [routerLink]="'createlog'">Add Log</button>
 </div>
+<router-outlet></router-outlet>
+ <section class="matTable">
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Class Name</th>
+                <th>Week</th>
+                <th>Time(minutes)</th>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Options</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let log of logs"> 
+                    <td>{{ log.id }}</td>
+                    <td>{{ log.course }}</td> 
+                    <td>{{ log.week }}</td>
+                    <td>{{ log.minutes }}</td> 
+                    <td>{{ log.task }}</td>
+                    <td>{{ log.description }}</td> 
+                    <td>
+                        <button mat-raised-button [routerLink]="['editlog/', log.id]">Edit</button>
+                        <button mat-raised-button class="moreButton" (click)="deleteById(log.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>

@@ -1,8 +1,16 @@
 .header
 {
     text-align: center;
-    background-color: white;
+    background-color: #d3d3d3;
+    box-shadow: 0px 0px 30px #d3d3d3;
+    background: linear-gradient(to left, #d20000, #000088);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
 }
+
 .center
 {
     text-align: center;
@@ -10,12 +18,7 @@
 
 .buttons
 {
-    align-items: right;
-}
-
-.buttons{
-    padding-left: 5px;
-    padding-right: 5px;
+    margin-left: auto;
 }
 
 .card
@@ -27,4 +30,24 @@
     box-shadow: 0px 0px 30px #d3d3d3;
     background: #d3d3d3;
     text-align: center;
+    padding-top: 10px;
+    margin-top: 250px;
+}
+
+h1
+{
+    -webkit-text-fill-color: white;
+}
+
+.homeBtn
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.header .btn
+{
+    margin-left: 10px;
+    min-height: min-content;
+    max-height: 50px;
 }
